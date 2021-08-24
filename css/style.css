@@ -1,19 +1,36 @@
-.w3-theme-l5 {color:#000 !important; background-color:#fafbfb !important}
-.w3-theme-l4 {color:#000 !important; background-color:#edf0f2 !important}
-.w3-theme-l3 {color:#000 !important; background-color:#dbe2e6 !important}
-.w3-theme-l2 {color:#000 !important; background-color:#c9d3d9 !important}
-.w3-theme-l1 {color:#000 !important; background-color:#b7c5cd !important}
-.w3-theme-d1 {color:#fff !important; background-color:#90a5b2 !important}
-.w3-theme-d2 {color:#fff !important; background-color:#7b94a3 !important}
-.w3-theme-d3 {color:#fff !important; background-color:#668393 !important}
-.w3-theme-d4 {color:#fff !important; background-color:#58707e !important}
-.w3-theme-d5 {color:#fff !important; background-color:#495e69 !important}
+body {
+  background-color: lightblue;
+}
 
-.w3-theme-light {color:#000 !important; background-color:#fafbfb !important}
-.w3-theme-dark {color:#fff !important; background-color:#495e69 !important}
-.w3-theme-action {color:#fff !important; background-color:#495e69 !important}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
 
-.w3-theme {color:#000 !important; background-color:#a5b6c0 !important}
-.w3-text-theme {color:#a5b6c0 !important}
-.w3-theme-border {border-color:#a5b6c0 !important}
-.w3-hover-theme:hover {color:#000 !important; background-color:#a5b6c0 !important}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
