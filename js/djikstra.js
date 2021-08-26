@@ -13,7 +13,7 @@ var drawGrid = function(){
           ctx.lineTo(x, h);
   }
   // set the color of the line
-  ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+  ctx.strokeStyle = 'rgb(0,0,0)';
   ctx.lineWidth = 1;
   // the stroke will actually paint the current path 
   ctx.stroke(); 
@@ -24,7 +24,7 @@ var drawGrid = function(){
           ctx.lineTo(w, y);
   }
   // set the color of the line
-  ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+  ctx.strokeStyle = 'rgb(0,0,0)';
   ctx.lineWidth = 1;
 
   ctx.stroke(); 

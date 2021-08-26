@@ -37,6 +37,7 @@ canvas {
   margin: 0 auto;
   margin-bottom: 1rem;
   display: block;
+  border: 1px black solid
 }
 
 h1 {
