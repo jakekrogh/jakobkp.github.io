@@ -3,7 +3,6 @@
 var canvas = document.getElementById("canv")
 var ctx = canvas.getContext('2d')
 var step = 10
-console.log(canvas)
 
 var drawGrid = function(){
   var w = canvas.width
@@ -26,9 +25,9 @@ var drawGrid = function(){
   }
   // set the color of the line
   ctx.strokeStyle = 'rgb(0,0,0)';
+  ctx.lineWidth = 1;
 
   ctx.stroke(); 
 };
-}
 
 drawGrid()
