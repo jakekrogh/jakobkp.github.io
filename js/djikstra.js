@@ -7,27 +7,19 @@ function init () {
   ctx = canvas.getContext('2d')
 }
 
-var drawGrid = function(w, h, id) {
-  ctx.canvas.width  = w;
-  ctx.canvas.height = h;
-
-
-  for (x=0;x<=w;x+=20) {
-      for (y=0;y<=h;y+=20) {
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, h);
-          ctx.stroke();
-          ctx.moveTo(0, y);
-          ctx.lineTo(w, y);
-          ctx.stroke();
-      }
-  }
-
-};
-
 // wait for the HTML to load
 document.addEventListener('DOMContentLoaded', init)
 
 console.log(3+2)
 
+for (x=0;x<=w;x+=20) {
+  for (y=0;y<=h;y+=20) {
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, h);
+      ctx.stroke();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+  }
+}
 drawGrid(500,500,'canv')
