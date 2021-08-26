@@ -52,9 +52,13 @@ canvas.addEventListener('click', function(event){
   ctx.textAlign = 'center';
   ctx.fillText(counter.toString(),x,y+4);
 })
-var tgrap = new Graph(Graph.UNDIRECTED)
-tgrap.addVertex(1)
-tgrap.addVertex(2)
-tgrap.addEdge(1,2,4)
-tgrap.addEdge(2,3,5)
-console.log(tgrap.nodes)
+
+function edgeAdder(){
+  var txtValue = document.getElementById("edgeInput").value;
+  if (!isNaN(txtValue)){
+    console.log("The value=" + parseInt(numberValue));
+  } else{
+    console.log("Please enter the integer value..");
+  }
+
+}
