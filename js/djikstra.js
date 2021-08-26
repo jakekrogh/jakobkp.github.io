@@ -5,16 +5,6 @@ let canvas, ctx
 function init () {
   canvas = document.getElementById('canv')
   ctx = canvas.getContext('2d')
-
-  // for (var i = 10; i <= 490; i+10){
-
-  //   // grid
-  //   ctx.moveTo(i,10);
-  //   ctx.lineTo(i,490);
-
-  //   ctx.moveTo(10,i);
-  //   ctx.lineTo(490,i);
-  // }
 }
 
 var drawGrid = function(w, h, id) {
