@@ -47,7 +47,7 @@ canvas.addEventListener('click', function(event){
   ctx.lineWidth = 4
   ctx.strokeStyle = 'rgb(0,0,0)'
   ctx.stroke()
-  ctx.font = '12pt Calibri';
+  ctx.font = 'bold 12pt  Serif';
   ctx.fillStyle = 'white';
   ctx.textAlign = 'center';
   ctx.fillText(counter.toString(),x,y+3);
