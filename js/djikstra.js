@@ -33,3 +33,5 @@ var drawGrid = function(){
   }
   img.src = url;
 }
+
+drawGrid()
