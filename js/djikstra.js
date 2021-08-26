@@ -22,4 +22,3 @@ for (x=0;x<=w;x+=20) {
       ctx.stroke();
   }
 }
-drawGrid(500,500,'canv')
