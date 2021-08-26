@@ -8,6 +8,7 @@ class Graph{
       return this.nodes.get(value)
     // test at ingen vertex bliver oprettet hvis der er givet forkerte source og dest fra add edge.
     } else if (x == -1 && y == -1) {
+        console.log("we get here")
         return null;
     } else{
       const vertex = new Node(x,y,value)
