@@ -17,7 +17,7 @@ var drawGrid = function(){
             <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1" /> \
         </pattern> \
     </defs> \
-    <rect width="100%" height="100%" fill="url(#smallGrid)" /> \
+    <rect width="100%" height="100%" fill="url(#grid)" /> \
     </svg>';
 
   var DOMURL = window.URL || window.webkitURL || window;
