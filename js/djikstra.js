@@ -46,6 +46,13 @@ canvas.addEventListener('click', function(event){
   ctx.strokeWidth = 4
   ctx.stroke()
 
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.arc(x,y, 15, 0, 2 * Math.PI)
+  ctx.fill();
+  ctx.font = '8pt Calibri';
+  ctx.fillStyle = 'white';
+  ctx.textAlign = 'center';
+  ctx.fillText(counter);
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
 tgrap.addVertex(1)
