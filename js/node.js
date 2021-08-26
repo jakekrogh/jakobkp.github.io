@@ -4,6 +4,6 @@ class Node{
     this.adj = []
   }
   addAdjacent(node,weight){
-    this.adj.push(node,weight)
+    this.adj.push([node,weight])
   }
 }
