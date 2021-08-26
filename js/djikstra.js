@@ -61,6 +61,7 @@ function edgeAdder(){
     if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
       console.log("Both nodes exist")
       const newedge = graph.addEdge(vert1,vert2,edgew)
+      console.log("Vert values:" + vert1.x + vert1.y + vert2.x + vert2.y)
       ctx.beginPath();
       ctx.moveTo(0,0); // this is the begining point of the line (x,y)
       ctx.lineTo(100,100);
