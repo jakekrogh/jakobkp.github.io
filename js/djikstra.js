@@ -52,7 +52,7 @@ canvas.addEventListener('click', function(event){
   ctx.font = '8pt Calibri';
   ctx.fillStyle = 'white';
   ctx.textAlign = 'center';
-  ctx.fillText(counter);
+  ctx.fillText(counter.toString(),x,y);
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
 tgrap.addVertex(1)
