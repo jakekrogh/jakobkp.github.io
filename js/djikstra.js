@@ -3,7 +3,7 @@ let canvas, ctx
 
 // setup config variables and start the program
 function init () {
-  canvas = document.getElementById('gameCanvas')
+  canvas = document.getElementById('canv')
   ctx = canvas.getContext('2d')
 }
 
