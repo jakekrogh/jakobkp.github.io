@@ -31,8 +31,8 @@ var drawGrid = function(){
 };
 drawGrid()
 var tgrap = new Graph(Graph.UNDIRECTED)
-Graph.addVertex(1)
-Graph.addVertex(2)
-Graph.addEdge(1,2,4)
-Graph.addEdge(2,3,5)
+tgrap.addVertex(1)
+tgrap.addVertex(2)
+tgrap.addEdge(1,2,4)
+tgrap.addEdge(2,3,5)
 console.log(nodes)
