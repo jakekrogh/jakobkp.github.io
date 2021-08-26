@@ -33,7 +33,7 @@ var drawGrid = function(){
 
   ctx.stroke(); 
 };
-drawGrid()
+//drawGrid()
 
 canvas.addEventListener('click', function(event){
   graph.addVertex(counter)
