@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', init)
 
 console.log(3+2)
 
-for (x=0;x<=w;x+=20) {
-  for (y=0;y<=h;y+=20) {
+for (x=0;x<=ctx.width;x+=20) {
+  for (y=0;y<=ctx.height;y+=20) {
       ctx.moveTo(x, 0);
       ctx.lineTo(x, h);
       ctx.stroke();
