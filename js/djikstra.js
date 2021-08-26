@@ -38,6 +38,7 @@ canvas.addEventListener('click', function(event){
   var y = (event.pageY - canvTop)
   ctx.beginPath();
   ctx.rect(x,y, 150, 100);
+  ctx.strokeStyle = black;
   ctx.stroke();
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
