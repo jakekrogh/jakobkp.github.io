@@ -43,10 +43,10 @@ canvas.addEventListener('click', function(event){
   ctx.beginPath()
   ctx.arc(x,y, 15, 0, 2 * Math.PI)
   ctx.strokeStyle = 'rgb(0,0,0)'
-  ctx.strokeWidth = 4
+  ctx.strokeWidth = 10
   ctx.stroke()
 
-  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillStyle = "rgb(169,169,169)";
   ctx.arc(x,y, 15, 0, 2 * Math.PI)
   ctx.fill();
   ctx.font = '8pt Calibri';
