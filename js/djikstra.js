@@ -59,9 +59,11 @@ function edgeAdder(){
   var edgew = document.getElementById("edgeWeight").value;
  
   if (Number.isInteger(parseInt(vert1)) && Number.isInteger(parseInt(vert2))  && Number.isInteger(parseInt(edgew)) ){
-    console.log((vert1));
-    console.log((vert2));
-    console.log((edgew));
+    if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
+      console.log("Both nodes exist")
+    } else{
+      console.log("One of the given vertices dont exist.")
+    }
   } else{
     console.log("Not all input values are numbers");
   }
