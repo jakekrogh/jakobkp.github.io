@@ -30,6 +30,11 @@ var drawGrid = function(){
   ctx.stroke(); 
 };
 drawGrid()
+
+canvas.addEventListener('click', function(event){
+  console.log(event.pageX)
+  console.log(event.pageY)
+})
 var tgrap = new Graph(Graph.UNDIRECTED)
 tgrap.addVertex(1)
 tgrap.addVertex(2)
