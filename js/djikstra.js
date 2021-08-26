@@ -36,10 +36,10 @@ drawGrid()
 canvas.addEventListener('click', function(event){
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
-  ctx.beginPath();
-  ctx.rect(x,y, 150, 100);
-  ctx.strokeStyle = black;
-  ctx.stroke();
+  ctx.beginPath()
+  ctx.arc(x,y, 50, 0, 2 * Math.PI)
+  ctx.strokeStyle = black
+  ctx.stroke()
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
 tgrap.addVertex(1)
