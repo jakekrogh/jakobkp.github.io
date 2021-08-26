@@ -50,7 +50,7 @@ canvas.addEventListener('click', function(event){
   ctx.font = 'bold 12pt  Serif';
   ctx.fillStyle = 'white';
   ctx.textAlign = 'center';
-  ctx.fillText(counter.toString(),x,y+3);
+  ctx.fillText(counter.toString(),x,y+4);
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
 tgrap.addVertex(1)
