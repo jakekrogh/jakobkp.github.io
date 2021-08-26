@@ -58,7 +58,7 @@ function edgeAdder(){
   var vert2 = document.getElementById("vert2").value;
   var edgew = document.getElementById("edgeWeight").value;
  
-  if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
+  if (Number.isInteger(parseInt(vert1)) && Number.isInteger(parseInt(vert2))  && Number.isInteger(parseInt(edgew)) ){
     console.log((vert1));
     console.log((vert2));
     console.log((edgew));
