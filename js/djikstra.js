@@ -37,7 +37,6 @@ var drawGrid = function(){
 
 canvas.addEventListener('click', function(event){
   graph.addVertex(counter)
-  counter++
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
   ctx.beginPath()
@@ -51,6 +50,7 @@ canvas.addEventListener('click', function(event){
   ctx.fillStyle = 'white';
   ctx.textAlign = 'center';
   ctx.fillText(counter.toString(),x,y+4);
+  counter++
 })
 
 function edgeAdder(){
