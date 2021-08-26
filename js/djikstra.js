@@ -1,5 +1,5 @@
 // initialize config variables here
-let canvas, ctx
+var canvas, ctx
 
 // setup config variables and start the program
 function init () {
