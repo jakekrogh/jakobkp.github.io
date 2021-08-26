@@ -2,14 +2,17 @@
 var canvas, ctx
 
 // setup config variables and start the program
-function init () {
+if( document.readyState !== 'loading' ) {
+  console.log( 'document is already ready, just execute code here' );
   canvas = document.getElementById('canv')
   ctx = canvas.getContext('2d')
-  console.log(9)
+} else {
+  document.addEventListener('DOMContentLoaded', function () {
+      console.log( 'document was not ready, place code here' );
+      canvas = document.getElementById('canv')
+      ctx = canvas.getContext('2d')
+  });
 }
-
-// wait for the HTML to load
-document.addEventListener('DOMContentLoaded', init)
 
 console.log(3+2)
 console.log(canvas)
