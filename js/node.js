@@ -1,6 +1,8 @@
 class Node{
-  constructor(value){
+  constructor(x,y,value){
     this.value = value;
+    this.x = x;
+    this.y = y;
     this.adj = []
   }
   addAdjacent(node,weight){

@@ -36,9 +36,9 @@ var drawGrid = function(){
 //drawGrid()
 
 canvas.addEventListener('click', function(event){
-  graph.addVertex(counter)
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
+  graph.addVertex(x,y,counter)
   ctx.beginPath()
   ctx.arc(x,y, 20, 0, 2 * Math.PI)
   ctx.fillStyle = "rgb(169,169,169)";
@@ -62,7 +62,9 @@ function edgeAdder(){
     if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
       console.log("Both nodes exist")
       const newedge = graph.addEdge(vert1,vert2,edgew)
-      console.log(graph.nodes)
+      canvasobj.beginPath();
+      canvasobj.moveTo(vert1.x+20,vert1.y); // this is the begining point of the line (x,y)
+      canvasobj.lineTo(vert2.x-20,vert2.y);
     } else{
       console.log("One of the given vertices dont exist.")
     }
