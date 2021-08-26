@@ -54,11 +54,16 @@ canvas.addEventListener('click', function(event){
 })
 
 function edgeAdder(){
-  var txtValue = document.getElementById("edgeInput").value;
-  if ((txtValue)){
-    console.log((txtValue));
+  var vert1 = document.getElementById("vert1").value;
+  var vert2 = document.getElementById("vert2").value;
+  var edgew = document.getElementById("edgeWeight").value;
+ 
+  if (!isNaN(vert1) && !isNaN(vert2) && !isNaN(edgew)){
+    console.log((vert1));
+    console.log((vert2));
+    console.log((edgew));
   } else{
-    console.log("Please enter the integer value..");
+    console.log("Not all input values are numbers");
   }
 
 }
