@@ -38,7 +38,7 @@ canvas.addEventListener('click', function(event){
   var y = (event.pageY - canvTop)
   ctx.beginPath()
   ctx.arc(x,y, 50, 0, 2 * Math.PI)
-  ctx.strokeStyle = black
+  ctx.strokeStyle = 'rgb(0,0,0)'
   ctx.stroke()
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
