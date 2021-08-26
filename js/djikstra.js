@@ -29,5 +29,10 @@ var drawGrid = function(){
 
   ctx.stroke(); 
 };
-
+var tgrap = new Graph(Graph.UNDIRECTED)
+Graph.addVertex(1)
+Graph.addVertex(2)
+Graph.addEdge(1,2,4)
+Graph.addEdge(2,3,5)
+console.log(nodes)
 drawGrid()
