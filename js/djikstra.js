@@ -5,6 +5,7 @@ var canvas, ctx
 function init () {
   canvas = document.getElementById('canv')
   ctx = canvas.getContext('2d')
+  console.log(9)
 }
 
 // wait for the HTML to load
