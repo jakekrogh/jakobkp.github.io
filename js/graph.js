@@ -5,12 +5,14 @@ class Graph{
   }
   addVertex(x,y,value){
     if(this.nodes.has(value)){
+      console.log("alt er som det burde her")
       return this.nodes.get(value)
     // test at ingen vertex bliver oprettet hvis der er givet forkerte source og dest fra add edge.
     } else if (x == -1 && y == -1) {
         console.log("we get here")
         return null;
     } else{
+      console.log("det ville ikke give mening og ende her efter edge")
       const vertex = new Node(x,y,value)
       this.nodes.set(value,vertex)
       return vertex
