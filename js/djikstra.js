@@ -34,6 +34,9 @@ drawGrid()
 canvas.addEventListener('click', function(event){
   console.log(event.pageX)
   console.log(event.pageY)
+  ctx.beginPath();
+  ctx.rect(event.pageX,event.pageY, 150, 100);
+  ctx.stroke();
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
 tgrap.addVertex(1)
