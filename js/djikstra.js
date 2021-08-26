@@ -8,8 +8,6 @@ function init () {
 }
 
 var drawGrid = function(w, h, id) {
-  var canvas = document.getElementById(id);
-  var ctx = canvas.getContext('2d');
   ctx.canvas.width  = w;
   ctx.canvas.height = h;
 
