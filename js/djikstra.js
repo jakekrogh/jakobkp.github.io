@@ -38,8 +38,7 @@ var drawGrid = function(){
 canvas.addEventListener('click', function(event){
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
-  const vert = graph.addVertex(x,y,counter)
-  console.log(vertex.x + " " + vertex.y)
+  graph.addVertex(x,y,counter)
   ctx.beginPath()
   ctx.arc(x,y, 20, 0, 2 * Math.PI)
   ctx.fillStyle = "rgb(169,169,169)";
@@ -59,6 +58,10 @@ function edgeAdder(){
   var vert2 = parseInt(document.getElementById("vert2").value);
   var edgew = parseInt(document.getElementById("edgeWeight").value);
   if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
+    v1 = graph.nodes.get(vert1)
+    v2 = graph.nodes.get(vert2)
+    console.log(v1)
+    console.log(v2)
     if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
       console.log("Both nodes exist")
       const newedge = graph.addEdge(vert1,vert2,edgew)
@@ -73,5 +76,4 @@ function edgeAdder(){
   } else{
     console.log("Not all input values are numbers");
   }
-
 }
