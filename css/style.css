@@ -34,7 +34,7 @@ body {
 canvas {
   background: #f8f8f8;
   padding: 0;
-  margin: 0 auto;
+  margin-left: 20px;
   margin-bottom: 1rem;
   display: block;
   border: 1px black solid
