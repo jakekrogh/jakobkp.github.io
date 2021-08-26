@@ -9,7 +9,7 @@ var drawGrid = function(){
   var data = 
     '<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"> \
     <defs> \
-        <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse"> \
+        <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse"> \
             <path d="M 8 0 L 0 0 0 8" fill="none" stroke="gray" stroke-width="0.5" /> \
         </pattern> \
         <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"> \
