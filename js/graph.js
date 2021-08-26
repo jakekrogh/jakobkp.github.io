@@ -21,7 +21,7 @@ class Graph{
     if (this.edgeDirection == Graph.UNDIRECTED){
       destNode.addAdjacent(sourceNode,weight)
     }
-    return [sourceNode, destNode]
+    return [sourceNode, destNode, weight]
   }
 }
 Graph.UNDIRECTED = Symbol('directed graph'); // two-ways edges
