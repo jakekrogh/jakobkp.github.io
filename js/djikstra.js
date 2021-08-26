@@ -54,11 +54,11 @@ canvas.addEventListener('click', function(event){
 })
 
 function edgeAdder(){
-  var vert1 = document.getElementById("vert1").value;
-  var vert2 = document.getElementById("vert2").value;
-  var edgew = document.getElementById("edgeWeight").value;
+  var vert1 = ParseInt(document.getElementById("vert1").value);
+  var vert2 = ParseInt(document.getElementById("vert2").value);
+  var edgew = ParseInt(document.getElementById("edgeWeight").value);
  
-  if (Number.isInteger(parseInt(vert1)) && Number.isInteger(parseInt(vert2))  && Number.isInteger(parseInt(edgew)) ){
+  if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
     if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
       console.log("Both nodes exist")
     } else{
