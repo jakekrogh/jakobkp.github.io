@@ -5,6 +5,8 @@ var ctx = canvas.getContext('2d')
 var canvLeft = canvas.offsetLeft + canvas.clientLeft
 var canvTop = canvas.offsetTop + canvas.clientTop
 var step = 20
+var counter = 0
+var graph = new Graph(Graph.UNDIRECTED)
 
 var drawGrid = function(){
   var w = canvas.width
@@ -34,12 +36,15 @@ var drawGrid = function(){
 drawGrid()
 
 canvas.addEventListener('click', function(event){
+  graph.addVertex(counter)
+  counter++
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
   ctx.beginPath()
   ctx.arc(x,y, 50, 0, 2 * Math.PI)
   ctx.strokeStyle = 'rgb(0,0,0)'
   ctx.stroke()
+
 })
 var tgrap = new Graph(Graph.UNDIRECTED)
 tgrap.addVertex(1)
