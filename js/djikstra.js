@@ -38,7 +38,8 @@ var drawGrid = function(){
 canvas.addEventListener('click', function(event){
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
-  graph.addVertex(x,y,counter)
+  const vert = graph.addVertex(x,y,counter)
+  console.log(vertex.x + " " + vertex.y)
   ctx.beginPath()
   ctx.arc(x,y, 20, 0, 2 * Math.PI)
   ctx.fillStyle = "rgb(169,169,169)";
