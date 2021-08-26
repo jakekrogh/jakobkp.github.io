@@ -2,35 +2,33 @@
 // setup config variables and start the program
 var canvas = document.getElementById("canv")
 var ctx = canvas.getContext('2d')
-
+var step = 10
 console.log(canvas)
 
 var drawGrid = function(){
-  var data = 
-    '<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"> \
-    <defs> \
-        <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse"> \
-            <path d="M 8 0 L 0 0 0 8" fill="none" stroke="gray" stroke-width="0.5" /> \
-        </pattern> \
-        <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"> \
-            <rect width="100" height="100" fill="url(#smallGrid)" /> \
-            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1" /> \
-        </pattern> \
-    </defs> \
-    <rect width="100%" height="100%" fill="url(#grid)" /> \
-    </svg>';
-
-  var DOMURL = window.URL || window.webkitURL || window;
-
-  var img = new Image();
-  var svg = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
-  var url = DOMURL.createObjectURL(svg);
-
-  img.onload = function () {
-  ctx.drawImage(img, 0, 0);
-  DOMURL.revokeObjectURL(url);
+  var w = canvas.width
+  var h = canvas.height
+  ctx.beginPath(); 
+  for (var x=0;x<=w;x+=step) {
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, h);
   }
-  img.src = url;
+  // set the color of the line
+  ctx.strokeStyle = 'rgb(0,0,0)';
+  ctx.lineWidth = 1;
+  // the stroke will actually paint the current path 
+  ctx.stroke(); 
+  // for the sake of the example 2nd path
+  ctx.beginPath(); 
+  for (var y=0;y<=h;y+=step) {
+          ctx.moveTo(0, y);
+          ctx.lineTo(w, y);
+  }
+  // set the color of the line
+  ctx.strokeStyle = 'rgb(0,0,0)';
+
+  ctx.stroke(); 
+};
 }
 
 drawGrid()
