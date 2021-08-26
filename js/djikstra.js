@@ -61,7 +61,7 @@ function edgeAdder(){
   if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
     if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
       console.log("Both nodes exist")
-      const newedge = addEdge(vert1,vert2,edgew)
+      const newedge = graph.addEdge(vert1,vert2,edgew)
       console.log(graph.nodes)
     } else{
       console.log("One of the given vertices dont exist.")
