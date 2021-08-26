@@ -17,13 +17,15 @@ class Graph{
   addEdge(source,destination,weight){
     const sourceNode = this.addVertex(-1,-1,source)
     const destNode = this.addVertex(-1,-1,destination)
+    if (sourceNode != null){
+      sourceNode.addAdjacent(destNode,weight)
 
-    sourceNode.addAdjacent(destNode,weight)
+      if (this.edgeDirection == Graph.UNDIRECTED){
+        destNode.addAdjacent(sourceNode,weight)
+      }
+      return [sourceNode, destNode, weight]
+    } else return null
 
-    if (this.edgeDirection == Graph.UNDIRECTED){
-      destNode.addAdjacent(sourceNode,weight)
-    }
-    return [sourceNode, destNode, weight]
   }
 }
 Graph.UNDIRECTED = Symbol('directed graph'); // two-ways edges
