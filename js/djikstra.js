@@ -60,15 +60,13 @@ function edgeAdder(){
   if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
     v1 = graph.nodes.get(vert1)
     v2 = graph.nodes.get(vert2)
-    console.log(v1)
-    console.log(v2)
-    if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
+    if (v1 != null && v2 != null){
       console.log("Both nodes exist")
       const newedge = graph.addEdge(vert1,vert2,edgew)
-      console.log("Vert values:" + vert1.x + vert1.y + vert2.x + vert2.y)
+      console.log("Vert values:" + v1.x + v1.y + v2.x + v2.y)
       ctx.beginPath();
-      ctx.moveTo(0,0); // this is the begining point of the line (x,y)
-      ctx.lineTo(100,100);
+      ctx.moveTo(v1.x+20,v1.y); // this is the begining point of the line (x,y)
+      ctx.lineTo(v2.x-20,v2.y);
       ctx.stroke();
     } else{
       console.log("One of the given vertices dont exist.")

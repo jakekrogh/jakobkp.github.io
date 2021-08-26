@@ -10,7 +10,6 @@ class Graph{
     } else if (x == -1 && y == -1) {
         return null;
     } else{
-      console.log("vertex kreation er som den er")
       const vertex = new Node(x,y,value)
       this.nodes.set(value,vertex)
       return vertex
