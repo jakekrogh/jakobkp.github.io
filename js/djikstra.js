@@ -43,6 +43,7 @@ canvas.addEventListener('click', function(event){
   ctx.beginPath()
   ctx.arc(x,y, 10, 0, 2 * Math.PI)
   ctx.strokeStyle = 'rgb(0,0,0)'
+  ctx.strokeWidth = 2
   ctx.stroke()
 
 })
