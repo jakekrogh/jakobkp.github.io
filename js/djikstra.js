@@ -1,18 +1,7 @@
-// initialize config variables here
-var canvas, ctx
 
 // setup config variables and start the program
-if( document.readyState !== 'loading' ) {
-  console.log( 'document is already ready, just execute code here' );
-  canvas = document.getElementById('canv')
-  ctx = canvas.getContext('2d')
-} else {
-  document.addEventListener('DOMContentLoaded', function () {
-      console.log( 'document was not ready, place code here' );
-      canvas = document.getElementById('canv')
-      ctx = canvas.getContext('2d')
-  });
-}
+var canvas = document.getElementById('canv')
+var ctx = canvas.getContext('2d')
 
 console.log(3+2)
 console.log(canvas)
