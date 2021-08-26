@@ -56,7 +56,7 @@ canvas.addEventListener('click', function(event){
 function edgeAdder(){
   var txtValue = document.getElementById("edgeInput").value;
   if (!isNaN(txtValue)){
-    console.log("The value=" + parseInt(txtValue));
+    console.log((txtValue));
   } else{
     console.log("Please enter the integer value..");
   }
