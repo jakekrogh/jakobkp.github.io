@@ -57,17 +57,13 @@ function edgeAdder(){
   var vert1 = parseInt(document.getElementById("vert1").value);
   var vert2 = parseInt(document.getElementById("vert2").value);
   var edgew = parseInt(document.getElementById("edgeWeight").value);
-  ctx.beginPath();
-  ctx.moveTo(vert1.x+20,vert1.y); // this is the begining point of the line (x,y)
-  ctx.lineTo(vert2.x-20,vert2.y);
-  ctx.stroke();
   if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
     if (graph.nodes.has(vert1) && graph.nodes.has(vert2)){
       console.log("Both nodes exist")
       const newedge = graph.addEdge(vert1,vert2,edgew)
       ctx.beginPath();
-      ctx.moveTo(vert1.x+20,vert1.y); // this is the begining point of the line (x,y)
-      ctx.lineTo(vert2.x-20,vert2.y);
+      ctx.moveTo(0,0); // this is the begining point of the line (x,y)
+      ctx.lineTo(100,100);
       ctx.stroke();
     } else{
       console.log("One of the given vertices dont exist.")

@@ -6,6 +6,7 @@ class Graph{
   addVertex(x,y,value){
     if(this.nodes.has(value)){
       return this.nodes.get(value)
+    // test at ingen vertex bliver oprettet hvis der er givet forkerte source og dest fra add edge.
     } else if (x == -1 && y == -1) {
         return null;
     } else{
@@ -17,6 +18,7 @@ class Graph{
   addEdge(source,destination,weight){
     const sourceNode = this.addVertex(-1,-1,source)
     const destNode = this.addVertex(-1,-1,destination)
+    // test at edge kun bliver added, hvis source og destination eksisterer.
     if (sourceNode != null){
       sourceNode.addAdjacent(destNode,weight)
 
