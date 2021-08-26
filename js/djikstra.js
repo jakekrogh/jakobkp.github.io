@@ -41,13 +41,13 @@ canvas.addEventListener('click', function(event){
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
   ctx.beginPath()
-  ctx.arc(x,y, 15, 0, 2 * Math.PI)
+  ctx.arc(x,y, 20, 0, 2 * Math.PI)
   ctx.fillStyle = "rgb(169,169,169)";
   ctx.fill();
   ctx.lineWidth = 4
   ctx.strokeStyle = 'rgb(0,0,0)'
   ctx.stroke()
-  ctx.font = '8pt Calibri';
+  ctx.font = '12pt Calibri';
   ctx.fillStyle = 'white';
   ctx.textAlign = 'center';
   ctx.fillText(counter.toString(),x,y+3);
