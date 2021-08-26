@@ -2,8 +2,8 @@
 // setup config variables and start the program
 var canvas = document.getElementById("canv")
 var ctx = canvas.getContext('2d')
-var elemLeft = elem.offsetLeft + elem.clientLeft
-var elemTop = elem.offsetTop + elem.clientTop
+var canvLeft = canvas.offsetLeft + canvas.clientLeft
+var canvTop = canvas.offsetTop + canvas.clientTop
 var step = 20
 
 var drawGrid = function(){
@@ -34,8 +34,8 @@ var drawGrid = function(){
 drawGrid()
 
 canvas.addEventListener('click', function(event){
-  var x = (event.pageX - elemLeft)
-  var y = (event.pageY - elemTop)
+  var x = (event.pageX - canvLeft)
+  var y = (event.pageY - canvTop)
   ctx.beginPath();
   ctx.rect(x,y, 150, 100);
   ctx.stroke();
