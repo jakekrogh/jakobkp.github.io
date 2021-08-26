@@ -41,9 +41,9 @@ canvas.addEventListener('click', function(event){
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
   ctx.beginPath()
-  ctx.arc(x,y, 10, 0, 2 * Math.PI)
+  ctx.arc(x,y, 15, 0, 2 * Math.PI)
   ctx.strokeStyle = 'rgb(0,0,0)'
-  ctx.strokeWidth = 2
+  ctx.strokeWidth = 4
   ctx.stroke()
 
 })
