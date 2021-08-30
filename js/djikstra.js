@@ -132,21 +132,3 @@ function edgeAdder(){
     console.log("Not all input values are numbers");
   }
 }
-function edgeRemover(){
-  var vert1 = (document.getElementById("rvert1").value);
-  var vert2 = (document.getElementById("rvert2").value);
-  let isnumv1 = /^\d+$/.test(vert1)
-  let isnumv2 = /^\d+$/.test(vert2)
-  if (isnumv1 && isnumv2 ){
-    v1 = graph.nodes.get(parseInt(vert1))
-    v2 = graph.nodes.get(parseInt(vert2))
-    if (v1 != null && v2 != null){
-      const newedge = graph.removeEdge(v1,v2)
-      ctx.beginPath();
-      ctx.moveTo(v1.circ.x+20,v1.circ.y); 
-      ctx.lineTo(v2.circ.x-20,v2.circ.y);
-      ctx.strokeStyle = "#f8f8f8"
-      ctx.stroke();
-    }
-  }
-}
