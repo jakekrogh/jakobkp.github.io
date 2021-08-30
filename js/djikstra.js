@@ -70,11 +70,13 @@ canvas.addEventListener('contextmenu', function(event){
   ctx.fill();
 
   for (i = 0; i < graph.nodes.size; i++){
-    let inode = graph.nodes.get(i)
-    let centerDist = Math.sqrt((remNode.x-inode.circ.x)**2+(remNode.y-inode.circ.y)**2) 
-    let radSum = inode.circ.rad+remNode.rad
-    if (centerDist < radSum){
-      inode.circ.draw(inode.value)
+    if (i != minIndex){
+      let inode = graph.nodes.get(i)
+      let centerDist = Math.sqrt((remNode.x-inode.circ.x)**2+(remNode.y-inode.circ.y)**2) 
+      let radSum = inode.circ.rad+remNode.rad
+      if (centerDist < radSum){
+        inode.circ.draw(inode.value)
+      }
     }
   }
 })
