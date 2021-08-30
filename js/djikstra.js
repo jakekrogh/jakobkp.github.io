@@ -63,14 +63,14 @@ canvas.addEventListener('contextmenu', function(event){
   }
   let negIndex = indexOfNegs(inCircle)
   console.log(negIndex)
-  if(negCount == 1){
+  if(negIndex.length == 1){
     let remNode = graph.nodes.get(negIndex[0]).circ
     ctx.beginPath()
     ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
     ctx.fillStyle = "#f8f8f8";
     ctx.fill();
   }
-  else if(negCount > 1){
+  else if(negIndex.length > 1){
     let minIndex = 0;
     let minVal = inCircle[0]
     for (var i = 0; i < negIndex; i++){
