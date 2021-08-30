@@ -10,7 +10,7 @@ class Circle{
     ctx.arc(this.x,this.y, this.rad, 0, 2 * Math.PI)
     ctx.fillStyle = this.col;
     ctx.fill();
-    ctx.lineWidth = 4
+    ctx.lineWidth = 1 
     ctx.strokeStyle = 'rgb(0,0,0)'
     ctx.stroke()
     ctx.font = 'bold 12pt  Serif';
