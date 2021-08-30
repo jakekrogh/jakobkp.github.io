@@ -63,14 +63,15 @@ canvas.addEventListener('contextmenu', function(event){
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
-  console.log(inCircle)
+  console.log("incircle:" + inCircle)
+  console.log("minIndex:" + minIndex)
   let minIndex = indexofMin(inCircle)
   const iter = graph.nodes.entries()
   let minVal = -1
   for (i = 0; i <= minIndex; i++){
     minVal = iter.next().value[0]
   }
-  console.log(minVal)
+  console.log("minval" + minVal)
   let remNode = graph.nodes.get(minVal).circ
   ctx.beginPath()
   ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
