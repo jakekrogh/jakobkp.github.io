@@ -58,8 +58,8 @@ canvas.addEventListener('contextmenu', function(event){
   var pointx = (event.pageX - canvLeft)
   var pointy = (event.pageY - canvTop)
   let inCircle = []
-  for (var i = 0; i < graph.nodes.size; i++){
-    let nodecirc = graph.nodes.get(i).circ
+  for (const entry of this.nodes.entries){
+    let nodecirc = entry[1].circ
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
