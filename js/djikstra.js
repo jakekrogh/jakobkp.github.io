@@ -70,6 +70,11 @@ canvas.addEventListener('contextmenu', function(event){
     ctx.fill();
   }
   else if(negCount > 1){
+    ctx.beginPath()
+    ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
+    ctx.fillStyle = "#f8f8f8";
+    ctx.fill();
+    
     let minIndex = 0;
     let minVal = inCircle[0]
     for (var i = 0; i < negIndex; i++){
