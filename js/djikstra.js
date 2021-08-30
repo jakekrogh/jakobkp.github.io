@@ -73,9 +73,9 @@ canvas.addEventListener('contextmenu', function(event){
     let minIndex = 0;
     let minVal = inCircle[0]
     for (var i = 0; i < negIndex; i++){
-      if (inCircle[i] < minVal){
-        minIndex = i
-        minVal = inCircle[i]
+      if (inCircle[negIndex[i]] < minVal){
+        minIndex = negIndex[i]
+        minVal = inCircle[negIndex[i]]
       }
     }
     for (var i = 0; i < negIndex; i++){
