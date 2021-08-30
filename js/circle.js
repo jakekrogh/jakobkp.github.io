@@ -7,8 +7,8 @@ class Circle{
   }
   draw(value){
     ctx.beginPath()
-    ctx.arc(x,y, rad, 0, 2 * Math.PI)
-    ctx.fillStyle = col;
+    ctx.arc(this.x,this.y, this.rad, 0, 2 * Math.PI)
+    ctx.fillStyle = this.col;
     ctx.fill();
     ctx.lineWidth = 4
     ctx.strokeStyle = 'rgb(0,0,0)'
@@ -16,6 +16,6 @@ class Circle{
     ctx.font = 'bold 12pt  Serif';
     ctx.fillStyle = 'white';
     ctx.textAlign = 'center';
-    ctx.fillText(value.toString(),x,y+4);
+    ctx.fillText(this.value.toString(),this.x,this.y+4);
   }
 }
