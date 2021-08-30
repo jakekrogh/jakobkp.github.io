@@ -3,11 +3,11 @@ class Graph{
     this.nodes = new Map()
     this.edgeDirection = edgeDirection
   }
-  addVertex(x,y,value){
+  addVertex(circ,value){
     if(this.nodes.has(value)){
       return this.nodes.get(value)
     } else {
-      const vertex = new Node(x,y,value)
+      const vertex = new Node(circ,value)
       this.nodes.set(value,vertex)
       return vertex
     }

@@ -38,18 +38,20 @@ var drawGrid = function(){
 canvas.addEventListener('click', function(event){
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
-  graph.addVertex(x,y,counter)
-  ctx.beginPath()
-  ctx.arc(x,y, 20, 0, 2 * Math.PI)
-  ctx.fillStyle = "rgb(169,169,169)";
-  ctx.fill();
-  ctx.lineWidth = 4
-  ctx.strokeStyle = 'rgb(0,0,0)'
-  ctx.stroke()
-  ctx.font = 'bold 12pt  Serif';
-  ctx.fillStyle = 'white';
-  ctx.textAlign = 'center';
-  ctx.fillText(counter.toString(),x,y+4);
+  let circ = new Circle(x,y,20,"rgb(169,169,169)")
+  circ.draw(counter)
+  graph.addVertex(circ,counter)
+  // ctx.beginPath()
+  // ctx.arc(x,y, 20, 0, 2 * Math.PI)
+  // ctx.fillStyle = "rgb(169,169,169)";
+  // ctx.fill();
+  // ctx.lineWidth = 4
+  // ctx.strokeStyle = 'rgb(0,0,0)'
+  // ctx.stroke()
+  // ctx.font = 'bold 12pt  Serif';
+  // ctx.fillStyle = 'white';
+  // ctx.textAlign = 'center';
+  // ctx.fillText(counter.toString(),x,y+4);
   counter++
 })
 
@@ -62,7 +64,7 @@ function edgeAdder(){
     v2 = graph.nodes.get(vert2)
 
     if (v1 != null && v2 != null){
-      const newedge = graph.addEdge(vert1,vert2,edgew)
+      const newedge = graph.addEdge(v1,v2,edgew)
       ctx.beginPath();
       ctx.moveTo(v1.x+20,v1.y); 
       ctx.lineTo(v2.x-20,v2.y);
