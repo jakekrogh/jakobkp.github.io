@@ -63,22 +63,21 @@ canvas.addEventListener('contextmenu', function(event){
     inCircle.push(val)
   }
   let minIndex = indexofMin(inCircle)
-  if(negIndex.length == 1){
-    let remNode = graph.nodes.get(minIndex).circ
-    ctx.beginPath()
-    ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
-    ctx.fillStyle = "#f8f8f8";
-    ctx.fill();
+  let remNode = graph.nodes.get(minIndex).circ
+  ctx.beginPath()
+  ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
+  ctx.fillStyle = "#f8f8f8";
+  ctx.fill();
 
-    for (i = 0; graph.nodes.size; i++){
-      let inode = graph.nodes.get(i)
-      let centerDist = Math.sqrt((remNode.x-inode.circ.x)**2+(remNode.y-inode.circ.y)**2) 
-      let radSum = inode.circ.rad+remNode.rad
-      if (centerDist < radSum){
-        inode.circ.draw(inode.value)
-      }
+  for (i = 0; graph.nodes.size; i++){
+    let inode = graph.nodes.get(i)
+    let centerDist = Math.sqrt((remNode.x-inode.circ.x)**2+(remNode.y-inode.circ.y)**2) 
+    let radSum = inode.circ.rad+remNode.rad
+    if (centerDist < radSum){
+      inode.circ.draw(inode.value)
     }
   }
+}
   // else if(negIndex.length > 1){
   //   let minIndex = 0;
   //   let minVal = inCircle[0]
