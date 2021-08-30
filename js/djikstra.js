@@ -50,7 +50,6 @@ canvas.addEventListener('click', function(event){
   // ctx.textAlign = 'center';
   // ctx.fillText(counter.toString(),x,y+4);
   counter++
-  console.log(graph.nodes)
 })
 // remove vertex
 canvas.addEventListener('contextmenu', function(event){
@@ -63,16 +62,12 @@ canvas.addEventListener('contextmenu', function(event){
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
-  console.log("incircle:" + inCircle)
   let minIndex = indexofMin(inCircle)
-  console.log("minIndex:" + minIndex)
   const iter = graph.nodes.entries()
   let minVal = -1
   for (i = 0; i <= minIndex; i++){
     minVal = iter.next().value[0]
-    console.log("for loop minVal at "+ i + " " + minVal)
   }
-  console.log("minval : " + minVal)
   let remNode = graph.nodes.get(minVal).circ
   ctx.beginPath()
   ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
