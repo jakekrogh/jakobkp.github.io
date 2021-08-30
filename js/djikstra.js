@@ -79,14 +79,14 @@ canvas.addEventListener('contextmenu', function(event){
         minVal = inCircle[negIndex[i]]
       }
     }
-    console.log(inCircle)
-    console.log(minVal + " " + minIndex)
     let remNode = graph.nodes.get(minIndex).circ
     ctx.beginPath()
     ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
     ctx.fillStyle = "#f8f8f8";
     ctx.fill();
-
+    console.log("Incircle: "+ inCircle)
+    console.log("minVal and MinIindex" + minVal + " " + minIndex)
+    console.log("negIndex =" + negIndex)
     for (var i = 0; i < negIndex.length; i++){
       if (i != minIndex){
         var notRemNode = graph.nodes.get(negIndex[i])
