@@ -22,11 +22,17 @@
       and the vertex "1" with a weight of 5, write 1 in the first box, 2 in the second, and 5 in the third. 
       Then press the "Add Edge" button. </p>
 </div>
+<div> 
 <input type="text" id="vert1" placeholder="1st Vertex">
 <input type="text" id="vert2" placeholder="2nd Vertex">
 <input type="text" id="edgeWeight" placeholder="Edge Weight">
 <button type="button" onclick="edgeAdder();">Add Edge</button>
-
+</div>
+<div> 
+  <input type="text" id="rvert1" placeholder="1st Vertex">
+  <input type="text" id="rvert2" placeholder="2nd Vertex">
+  <button type="button" onclick="edgeAdder();">Remove Edge</button>
+  </div>
 <canvas id="canv" width="800" height="400"> </canvas>
 
 <script type = "text/javascript" src="js/circle.js"></script>
