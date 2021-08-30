@@ -76,9 +76,9 @@ canvas.addEventListener('contextmenu', function(event){
   ctx.fillStyle = "#f8f8f8";
   ctx.fill();
   
-  for (i = 0; i < graph.nodes.size; i++){
-    if (i != minIndex){
-      let inode = graph.nodes.get(i)
+  for (const entry of graph.nodes.entries()){
+    if (entry[0] != minVal){
+      let inode = entry[1]
       let centerDist = Math.sqrt((remNode.x-inode.circ.x)**2+(remNode.y-inode.circ.y)**2) 
       let radSum = inode.circ.rad+remNode.rad
       if (centerDist < radSum){
