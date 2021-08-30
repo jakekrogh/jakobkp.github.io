@@ -56,19 +56,23 @@ canvas.addEventListener('click', function(event){
 })
 
 function edgeAdder(){
+  console.log("the function is called")
   var vert1 = parseInt(document.getElementById("vert1").value);
   var vert2 = parseInt(document.getElementById("vert2").value);
   var edgew = parseInt(document.getElementById("edgeWeight").value);
   if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
+    console.log("all input values are numbers")
     v1 = graph.nodes.get(vert1)
     v2 = graph.nodes.get(vert2)
 
     if (v1 != null && v2 != null){
+      console.log("the nodes exists")
       const newedge = graph.addEdge(v1,v2,edgew)
       ctx.beginPath();
       ctx.moveTo(v1.x+20,v1.y); 
       ctx.lineTo(v2.x-20,v2.y);
       ctx.stroke();
+      console.log("edge has been drawn at " + v1.x + "," +v1.y +"and" + v2.x + "," +v2.y)
     } else{
       // lav om til error output
       console.log("One of the given vertices dont exist.")
