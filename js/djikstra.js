@@ -70,6 +70,7 @@ canvas.addEventListener('contextmenu', function(event){
   let minVal = -1
   for (i = 0; i <= minIndex; i++){
     minVal = iter.next().value[0]
+    console.log(minVal)
   }
   console.log("minval" + minVal)
   let remNode = graph.nodes.get(minVal).circ
