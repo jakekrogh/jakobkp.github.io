@@ -68,7 +68,7 @@ canvas.addEventListener('contextmenu', function(event){
   ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
   ctx.fillStyle = "#f8f8f8";
   ctx.fill();
-
+  
   for (i = 0; i < graph.nodes.size; i++){
     if (i != minIndex){
       let inode = graph.nodes.get(i)
@@ -79,6 +79,7 @@ canvas.addEventListener('contextmenu', function(event){
       }
     }
   }
+  graph.removeVertex(minIndex)
 })
   // else if(negIndex.length > 1){
   //   let minIndex = 0;
