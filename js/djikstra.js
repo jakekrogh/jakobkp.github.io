@@ -65,7 +65,7 @@ canvas.addEventListener('contextmenu', function(event){
   console.log(remVal)
   let remNode = graph.nodes.get(remVal).circ
   ctx.beginPath()
-  ctx.arc(remNode.x,remNode.y, remNode.rad, 0, 2 * Math.PI)
+  ctx.arc(remNode.x,remNode.y, remNode.rad+1, 0, 2 * Math.PI)
   ctx.fillStyle = "f8f8f8";
   ctx.fill();
 })
