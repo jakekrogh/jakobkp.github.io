@@ -137,12 +137,12 @@ function edgeAdder(){
   let isnumedgew = /^\d+$/.test(edgew)
 
   if (isnumv1 && isnumv2  && isnumedgew ){
-    v1 = graph.nodes.get(ParseInt(vert1))
-    v2 = graph.nodes.get(ParseInt(vert2))
+    v1 = graph.nodes.get(parseInt(vert1))
+    v2 = graph.nodes.get(parseInt(vert2))
     // check that the given vertices exist
     if (v1 != null && v2 != null){
       // add and draw edge
-      const newedge = graph.addEdge(v1,v2,ParseInt(edgew))
+      const newedge = graph.addEdge(v1,v2,parseInt(edgew))
       ctx.beginPath();
       ctx.moveTo(v1.circ.x+20,v1.circ.y); 
       ctx.lineTo(v2.circ.x-20,v2.circ.y);
