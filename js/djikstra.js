@@ -69,8 +69,8 @@ function edgeAdder(){
       console.log("the nodes exists")
       const newedge = graph.addEdge(v1,v2,edgew)
       ctx.beginPath();
-      ctx.moveTo(v1.x+20,v1.y); 
-      ctx.lineTo(v2.x-20,v2.y);
+      ctx.moveTo(v1.circ.x+20,v1.circ.y); 
+      ctx.lineTo(v2.circ.x-20,v2.circ.y);
       ctx.stroke();
       console.log("edge has been drawn at " + v1.x + "," +v1.y +"and" + v2.x + "," +v2.y)
     } else{
