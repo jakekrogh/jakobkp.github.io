@@ -67,23 +67,21 @@ canvas.addEventListener('contextmenu', function(event){
 })
 
 function edgeAdder(){
-  console.log("the function is called")
+  // get string from input boxes
   var vert1 = (document.getElementById("vert1").value);
   var vert2 = (document.getElementById("vert2").value);
-  console.log(vert2)
   var edgew = (document.getElementById("edgeWeight").value);
+  // test if it is only digits
   let isnumv1 = /^\d+$/.test(vert1)
   let isnumv2 = /^\d+$/.test(vert2)
-  console.log(isnumv2)
   let isnumedgew = /^\d+$/.test(edgew)
 
   if (isnumv1 && isnumv2  && isnumedgew ){
-    console.log("all input values are numbers")
     v1 = graph.nodes.get(ParseInt(vert1))
     v2 = graph.nodes.get(ParseInt(vert2))
-
+    // check that the given vertices exist
     if (v1 != null && v2 != null){
-      console.log("the nodes exists")
+      // add and draw edge
       const newedge = graph.addEdge(v1,v2,ParseInt(edgew))
       ctx.beginPath();
       ctx.moveTo(v1.circ.x+20,v1.circ.y); 
