@@ -70,9 +70,9 @@ canvas.addEventListener('contextmenu', function(event){
   let minVal = -1
   for (i = 0; i <= minIndex; i++){
     minVal = iter.next().value[0]
-    console.log(minVal)
+    console.log("for loop minVal at "+ i + " " + minVal)
   }
-  console.log("minval" + minVal)
+  console.log("minval : " + minVal)
   let remNode = graph.nodes.get(minVal).circ
   ctx.beginPath()
   ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
