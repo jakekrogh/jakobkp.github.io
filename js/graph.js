@@ -13,6 +13,24 @@ class Graph{
       return vertex
     }
   }
+
+  removeVertex(value){
+    let temp = this.nodes.get(value)
+    if (temp){
+      for (node of this.nodes.values()){
+        node.removeAdjacent(temp)
+      }
+    }
+    return this.nodes.delete(value)
+  }
+
+  removeEdge(source,destination){
+    source.removeAdjacent(destination)
+    if (this.edgeDirection == Graph.UNDIRECTED){
+      destination.removeAdjacent(source)
+    }
+    return [source, destination]
+  }
   addEdge(source,destination,weight){
       source.addAdjacent(destination,weight)
       if (this.edgeDirection == Graph.UNDIRECTED){
