@@ -64,8 +64,24 @@ canvas.addEventListener('contextmenu', function(event){
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
-  console.log(inCircle)
+  let remVal = indexOfMin(inCircle)
+  console.log(remVal)
 })
+
+function indexOfMin(arr){
+  if (arr.length == 0){
+    return -1
+  }
+  var min = arr[0]
+  var minIndex = 0
+  for (var i = 0; i < arr.length; i++){
+    if(arr[i] < min){
+      minIndex = i
+      min = arr[i]
+    }
+  }
+  return minIndex
+}
 
 function edgeAdder(){
   // get string from input boxes
