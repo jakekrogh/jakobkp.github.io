@@ -89,7 +89,7 @@ canvas.addEventListener('contextmenu', function(event){
       }
     }
   }
-  graph.removeVertex(minIndex)
+  graph.removeVertex(minVal)
 })
   // else if(negIndex.length > 1){
   //   let minIndex = 0;
