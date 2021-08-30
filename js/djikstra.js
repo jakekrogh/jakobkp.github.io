@@ -79,6 +79,8 @@ canvas.addEventListener('contextmenu', function(event){
         minVal = inCircle[negIndex[i]]
       }
     }
+    console.log(inCircle)
+    console.log(minVal + " " + minIndex)
     let remNode = graph.nodes.get(minIndex).circ
     ctx.beginPath()
     ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
