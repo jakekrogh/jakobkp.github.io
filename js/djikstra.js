@@ -66,9 +66,8 @@ canvas.addEventListener('contextmenu', function(event){
   console.log(inCircle)
   let minIndex = indexofMin(inCircle)
   const iter = graph.nodes.entries()
-  let minVal = -1
-  for (i = 0; i <= indexofMin; i++){
-    minVal = iter.next().value[0]
+  for (i = 0; i <= minIndex; i++){
+    let minVal = iter.next().value[0]
   }
   let remNode = graph.nodes.get(minVal).circ
   ctx.beginPath()
