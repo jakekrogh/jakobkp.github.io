@@ -59,9 +59,11 @@ function edgeAdder(){
   console.log("the function is called")
   var vert1 = parseInt(document.getElementById("vert1").value);
   var vert2 = parseInt(document.getElementById("vert2").value);
+  console.log(vert2)
   var edgew = parseInt(document.getElementById("edgeWeight").value);
   let isnumv1 = /^\d+$/.test(vert1)
   let isnumv2 = /^\d+$/.test(vert2)
+  console.log(isnumv2)
   let isnumedgew = /^\d+$/.test(edgew)
 
   if (isnumv1 && isnumv2  && isnumedgew ){
@@ -76,7 +78,6 @@ function edgeAdder(){
       ctx.moveTo(v1.circ.x+20,v1.circ.y); 
       ctx.lineTo(v2.circ.x-20,v2.circ.y);
       ctx.stroke();
-      console.log("edge has been drawn at " + v1.x + "," +v1.y +"and" + v2.x + "," +v2.y)
     } else{
       // lav om til error output
       console.log("One of the given vertices dont exist.")
