@@ -64,8 +64,8 @@ canvas.addEventListener('contextmenu', function(event){
     inCircle.push(val)
   }
   console.log("incircle:" + inCircle)
-  console.log("minIndex:" + minIndex)
   let minIndex = indexofMin(inCircle)
+  console.log("minIndex:" + minIndex)
   const iter = graph.nodes.entries()
   let minVal = -1
   for (i = 0; i <= minIndex; i++){
