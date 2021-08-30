@@ -62,10 +62,8 @@ canvas.addEventListener('contextmenu', function(event){
   let inCircle = []
   console.log("graph length:" + graph.nodessize)
   for (var i = 0; i < graph.nodes.size; i++){
-    let circrad = graph.nodes.get(i).circ.rad
-    console.log(circrad)
-    let val = (pointx**2+pointy**2-(graph.nodes.get(i).circ.rad)**2)
-    console.log(val)
+    let nodecirc = graph.nodes.get(i).circ
+    let val = (pointx-nodecirc.x)**2+(ponty-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
   console.log(inCircle)
