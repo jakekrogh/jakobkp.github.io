@@ -89,7 +89,7 @@ canvas.addEventListener('contextmenu', function(event){
     console.log("minVal and MinIindex" + minVal + " " + minIndex)
     console.log("negIndex =" + negIndex)
     for (var i = 0; i < negIndex.length; i++){
-      if (i != minIndex){
+      if (negIndex[i] != minIndex){
         var notRemNode = graph.nodes.get(negIndex[i])
         notRemNode.circ.draw(notRemNode.value)
       }
