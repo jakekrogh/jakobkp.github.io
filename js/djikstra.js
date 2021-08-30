@@ -86,30 +86,6 @@ canvas.addEventListener('contextmenu', function(event){
   }
   graph.removeVertex(minVal)
 })
-  // else if(negIndex.length > 1){
-  //   let minIndex = 0;
-  //   let minVal = inCircle[0]
-  //   for (var i = 0; i < negIndex.length; i++){
-  //     if (inCircle[negIndex[i]] < minVal){
-  //       minIndex = negIndex[i]
-  //       minVal = inCircle[negIndex[i]]
-  //     }
-  //   }
-  //   let remNode = graph.nodes.get(minIndex).circ
-  //   ctx.beginPath()
-  //   ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
-  //   ctx.fillStyle = "#f8f8f8";
-  //   ctx.fill();
-  //   console.log("Incircle: "+ inCircle)
-  //   console.log("minVal and MinIindex" + minVal + " " + minIndex)
-  //   console.log("negIndex =" + negIndex)
-  //   for (var i = 0; i < negIndex.length; i++){
-  //     if (negIndex[i] != minIndex){
-  //       var notRemNode = graph.nodes.get(negIndex[i])
-  //       notRemNode.circ.draw(notRemNode.value)
-  //     }
-  //   }
-  // }
 
 function indexofMin(arr){
   if (arr.length == 0){
@@ -154,5 +130,23 @@ function edgeAdder(){
   } else{
     // lav om til error output
     console.log("Not all input values are numbers");
+  }
+}
+function edgeRemover(){
+  var vert1 = (document.getElementById("rvert1").value);
+  var vert2 = (document.getElementById("rvert2").value);
+  let isnumv1 = /^\d+$/.test(vert1)
+  let isnumv2 = /^\d+$/.test(vert2)
+  if (isnumv1 && isnumv2 ){
+    v1 = graph.nodes.get(parseInt(vert1))
+    v2 = graph.nodes.get(parseInt(vert2))
+    if (v1 != null && v2 != null){
+      const newedge = graph.removeEdge(v1,v2)
+      ctx.beginPath();
+      ctx.moveTo(v1.circ.x+20,v1.circ.y); 
+      ctx.lineTo(v2.circ.x-20,v2.circ.y);
+      ctx.strokeStyle = "#f8f8f8"
+      ctx.stroke();
+    }
   }
 }
