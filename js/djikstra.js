@@ -56,11 +56,9 @@ canvas.addEventListener('click', function(event){
 })
 
 canvas.addEventListener('contextmenu', function(event){
-  console.log("the event happens.")
   var pointx = (event.pageX - canvLeft)
   var pointy = (event.pageY - canvTop)
   let inCircle = []
-  console.log("graph length:" + graph.nodessize)
   for (var i = 0; i < graph.nodes.size; i++){
     let nodecirc = graph.nodes.get(i).circ
     let val = (pointx-nodecirc.x)**2+(ponty-nodecirc.y)**2-nodecirc.rad**2
