@@ -53,6 +53,7 @@ canvas.addEventListener('click', function(event){
 })
 // remove vertex
 canvas.addEventListener('contextmenu', function(event){
+  canvas.preventDefault()
   var pointx = (event.pageX - canvLeft)
   var pointy = (event.pageY - canvTop)
   let inCircle = []
