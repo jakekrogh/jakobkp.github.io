@@ -9,7 +9,7 @@ class Node{
   }
 
   removeAdjacent(node){
-    var adjIndex = this.adjacents.indexOf(node)
+    var adjIndex = this.adj.indexOf(node)
     if (adjIndex != -1){
       this.adj.splice(adjIndex,1)
       return node
