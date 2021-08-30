@@ -17,7 +17,7 @@ class Graph{
   removeVertex(value){
     let temp = this.nodes.get(value)
     if (temp){
-      for (node of this.nodes.values()){
+      for (const node of this.nodes.values()){
         node.removeAdjacent(temp)
       }
     }
