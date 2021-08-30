@@ -60,7 +60,11 @@ function edgeAdder(){
   var vert1 = parseInt(document.getElementById("vert1").value);
   var vert2 = parseInt(document.getElementById("vert2").value);
   var edgew = parseInt(document.getElementById("edgeWeight").value);
-  if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
+  let isnumv1 = /^\d+$/.test(vert1)
+  let isnumv2 = /^\d+$/.test(vert2)
+  let isnumedgew = /^\d+$/.test(edgew)
+
+  if (isnumv1 && isnumv2  && isnumedgew ){
     console.log("all input values are numbers")
     v1 = graph.nodes.get(vert1)
     v2 = graph.nodes.get(vert2)
