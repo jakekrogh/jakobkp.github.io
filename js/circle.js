@@ -16,6 +16,6 @@ class Circle{
     ctx.font = 'bold 12pt  Serif';
     ctx.fillStyle = 'white';
     ctx.textAlign = 'center';
-    ctx.fillText(this.value.toString(),this.x,this.y+4);
+    ctx.fillText(value.toString(),this.x,this.y+4);
   }
 }
