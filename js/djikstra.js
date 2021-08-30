@@ -57,10 +57,10 @@ canvas.addEventListener('click', function(event){
 
 function edgeAdder(){
   console.log("the function is called")
-  var vert1 = parseInt(document.getElementById("vert1").value);
-  var vert2 = parseInt(document.getElementById("vert2").value);
+  var vert1 = (document.getElementById("vert1").value);
+  var vert2 = (document.getElementById("vert2").value);
   console.log(vert2)
-  var edgew = parseInt(document.getElementById("edgeWeight").value);
+  var edgew = (document.getElementById("edgeWeight").value);
   let isnumv1 = /^\d+$/.test(vert1)
   let isnumv2 = /^\d+$/.test(vert2)
   console.log(isnumv2)
