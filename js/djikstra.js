@@ -60,18 +60,19 @@ function edgeAdder(){
   if (Number.isInteger(vert1) && Number.isInteger(vert2)  && Number.isInteger(edgew) ){
     v1 = graph.nodes.get(vert1)
     v2 = graph.nodes.get(vert2)
+
     if (v1 != null && v2 != null){
-      console.log("Both nodes exist")
       const newedge = graph.addEdge(vert1,vert2,edgew)
-      console.log("Vert values:" + v1.x + v1.y + v2.x + v2.y)
       ctx.beginPath();
-      ctx.moveTo(v1.x+20,v1.y); // this is the begining point of the line (x,y)
+      ctx.moveTo(v1.x+20,v1.y); 
       ctx.lineTo(v2.x-20,v2.y);
       ctx.stroke();
     } else{
+      // lav om til error output
       console.log("One of the given vertices dont exist.")
     }
   } else{
+    // lav om til error output
     console.log("Not all input values are numbers");
   }
 }
