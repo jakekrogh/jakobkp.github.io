@@ -58,7 +58,7 @@ canvas.addEventListener('contextmenu', function(event){
   var pointx = (event.pageX - canvLeft)
   var pointy = (event.pageY - canvTop)
   let inCircle = []
-  for (const entry of this.nodes.entries){
+  for (const entry of this.nodes.entries()){
     let nodecirc = entry[1].circ
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
