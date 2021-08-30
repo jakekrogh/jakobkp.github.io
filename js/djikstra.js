@@ -33,18 +33,15 @@ var drawGrid = function(){
 
   ctx.stroke(); 
 };
-//drawGrid()
 
+// add vertex
 canvas.addEventListener('click', function(event){
   var x = (event.pageX - canvLeft)
   var y = (event.pageY - canvTop)
   let circ = new Circle(x,y,20,"rgb(169,169,169)")
   circ.draw(counter)
   graph.addVertex(circ,counter)
-  // ctx.beginPath()
-  // ctx.arc(x,y, 20, 0, 2 * Math.PI)
-  // ctx.fillStyle = "rgb(169,169,169)";
-  // ctx.fill();
+
   // ctx.lineWidth = 4
   // ctx.strokeStyle = 'rgb(0,0,0)'
   // ctx.stroke()
@@ -54,7 +51,7 @@ canvas.addEventListener('click', function(event){
   // ctx.fillText(counter.toString(),x,y+4);
   counter++
 })
-
+// remove vertex
 canvas.addEventListener('contextmenu', function(event){
   var pointx = (event.pageX - canvLeft)
   var pointy = (event.pageY - canvTop)
@@ -66,6 +63,11 @@ canvas.addEventListener('contextmenu', function(event){
   }
   let remVal = indexOfMin(inCircle)
   console.log(remVal)
+  let remNode = graph.nodes.get(remVal).circ
+  ctx.beginPath()
+  ctx.arc(remNode.x,remNode.y, remNode.rad, 0, 2 * Math.PI)
+  ctx.fillStyle = "f8f8f8";
+  ctx.fill();
 })
 
 function indexOfMin(arr){
