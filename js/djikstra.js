@@ -61,9 +61,8 @@ canvas.addEventListener('contextmenu', function(event){
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
-  let negIndex,negCount = indexOfNegs(inCircle)
+  let negIndex = indexOfNegs(inCircle)
   console.log(negIndex)
-  console.log(negCount)
   if(negCount == 1){
     let remNode = graph.nodes.get(negIndex[0]).circ
     ctx.beginPath()
@@ -96,19 +95,16 @@ canvas.addEventListener('contextmenu', function(event){
 })
 
 function indexOfNegs(arr){
-  var negcount = 0
   if (arr.length == 0){
     return -1
   }
   var negIndexes = []
   for (var i = 0; i < arr.length; i++){
-    var ival = arr[i]
-    if(ival < 0){
-      negcount++
+    if(arr[i] < 0){
       negIndexes.push(i)
     }
   }
-  return negIndexes,negcount
+  return negIndexes
 }
 
 function edgeAdder(){
