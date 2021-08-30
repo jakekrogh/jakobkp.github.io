@@ -61,28 +61,46 @@ canvas.addEventListener('contextmenu', function(event){
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
-  let remVal = indexOfMin(inCircle)
-  console.log(remVal)
-  let remNode = graph.nodes.get(remVal).circ
-  ctx.beginPath()
-  ctx.arc(remNode.x,remNode.y, remNode.rad+1, 0, 2 * Math.PI)
-  ctx.fillStyle = "f8f8f8";
-  ctx.fill();
+  let negIndex,negCount = indexOfNegs(inCircle)
+  if(negCount == 1){
+    let remNode = graph.nodes.get(negIndex[0]).circ
+    ctx.beginPath()
+    ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
+    ctx.fillStyle = "#f8f8f8";
+    ctx.fill();
+  }
+  else if(negCount > 1){
+    let minIndex = 0;
+    let minVal = inCircle[0]
+    for (var i = 0; i < negIndex; i++){
+      if (inCircle[i] < minVal){
+        minIndex = i
+        minVal = inCircle[i]
+      }
+    }
+    for (var i = 0; i < negIndex; i++){
+      if (i != minIndex){
+        var notRemNode = graph.nodes.get(negIndex[i])
+        notRemNode.circ.draw(notRemNode.value)
+      }
+    }
+  }
 })
 
-function indexOfMin(arr){
+function indexOfNegs(arr){
+  var negcount = 0
   if (arr.length == 0){
     return -1
   }
-  var min = arr[0]
-  var minIndex = 0
+  var negIndexes = []
   for (var i = 0; i < arr.length; i++){
-    if(arr[i] < min){
-      minIndex = i
-      min = arr[i]
+    var ival = arr[i]
+    if(ival < 0){
+      negcount++
+      negIndexes.push(i)
     }
   }
-  return minIndex
+  return negIndexes,negcount
 }
 
 function edgeAdder(){
