@@ -58,13 +58,13 @@ canvas.addEventListener('contextmenu', function(event){
   var pointx = (event.pageX - canvLeft)
   var pointy = (event.pageY - canvTop)
   let inCircle = []
-  for (const entry of this.nodes.entries()){
+  for (const entry of graph.nodes.entries()){
     let nodecirc = entry[1].circ
     let val = (pointx-nodecirc.x)**2+(pointy-nodecirc.y)**2-nodecirc.rad**2
     inCircle.push(val)
   }
   let minIndex = indexofMin(inCircle)
-  let remNode = graph.nodes.get(minIndex).circ
+  let remNode = graph.nodes .get(minIndex).circ
   ctx.beginPath()
   ctx.arc(remNode.x,remNode.y, remNode.rad+3, 0, 2 * Math.PI)
   ctx.fillStyle = "#f8f8f8";
