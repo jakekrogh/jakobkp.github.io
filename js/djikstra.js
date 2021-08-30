@@ -55,6 +55,17 @@ canvas.addEventListener('click', function(event){
   counter++
 })
 
+canvas.addEventListener('contextmenu', function(event){
+  console.log("the event happens.")
+  var pointx = (event.pageX - canvLeft)
+  var pointy = (event.pageY - canvTop)
+  let inCircle = []
+  for (var i = 0; i < graph.nodes.length; i++){
+    inCircle.push(pointx**2+pointy**2-(graph.nodes[i,1].circ.rad)**2)
+  }
+  console.log(inCircle)
+})
+
 function edgeAdder(){
   console.log("the function is called")
   var vert1 = (document.getElementById("vert1").value);

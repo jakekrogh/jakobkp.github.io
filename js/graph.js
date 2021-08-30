@@ -1,5 +1,6 @@
 class Graph{
   constructor(edgeDirection){
+    // array of nodes [["0",vert0], ["1",vert1]]
     this.nodes = new Map()
     this.edgeDirection = edgeDirection
   }
