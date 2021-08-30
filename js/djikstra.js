@@ -50,6 +50,7 @@ canvas.addEventListener('click', function(event){
   // ctx.textAlign = 'center';
   // ctx.fillText(counter.toString(),x,y+4);
   counter++
+  console.log(graph.nodes)
 })
 // remove vertex
 canvas.addEventListener('contextmenu', function(event){
