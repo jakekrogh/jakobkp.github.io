@@ -77,7 +77,7 @@ canvas.addEventListener('contextmenu', function(event){
       inode.circ.draw(inode.value)
     }
   }
-}
+})
   // else if(negIndex.length > 1){
   //   let minIndex = 0;
   //   let minVal = inCircle[0]
@@ -102,7 +102,6 @@ canvas.addEventListener('contextmenu', function(event){
   //     }
   //   }
   // }
-})
 
 function indexofMin(arr){
   if (arr.length == 0){
