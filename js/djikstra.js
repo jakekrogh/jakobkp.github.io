@@ -69,7 +69,7 @@ canvas.addEventListener('contextmenu', function(event){
   ctx.fillStyle = "#f8f8f8";
   ctx.fill();
 
-  for (i = 0; graph.nodes.size; i++){
+  for (i = 0; i < graph.nodes.size; i++){
     let inode = graph.nodes.get(i)
     let centerDist = Math.sqrt((remNode.x-inode.circ.x)**2+(remNode.y-inode.circ.y)**2) 
     let radSum = inode.circ.rad+remNode.rad
