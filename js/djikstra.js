@@ -73,7 +73,7 @@ canvas.addEventListener('contextmenu', function(event){
   else if(negIndex.length > 1){
     let minIndex = 0;
     let minVal = inCircle[0]
-    for (var i = 0; i < negIndex; i++){
+    for (var i = 0; i < negIndex.length; i++){
       if (inCircle[negIndex[i]] < minVal){
         minIndex = negIndex[i]
         minVal = inCircle[negIndex[i]]
@@ -87,7 +87,7 @@ canvas.addEventListener('contextmenu', function(event){
     ctx.fillStyle = "#f8f8f8";
     ctx.fill();
 
-    for (var i = 0; i < negIndex; i++){
+    for (var i = 0; i < negIndex.length; i++){
       if (i != minIndex){
         var notRemNode = graph.nodes.get(negIndex[i])
         notRemNode.circ.draw(notRemNode.value)
