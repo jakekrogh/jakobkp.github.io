@@ -2,17 +2,16 @@ class Node{
   constructor(circ,value){
     this.value = value
     this.circ = circ
-    this.adj = []
+    this.adj = new Map()
   }
-  addAdjacent(node,weight){
-    this.adj.push([node,weight])
+  addAdjacent(destnode,edge){
+    this.adj.set(destnode,edge)
   }
 
   removeAdjacent(node){
-    var adjIndex = this.adj.indexOf(node)
-    if (adjIndex != -1){
-      this.adj.splice(adjIndex,1)
-      return node
+    var temp = this.adj.get(node)
+    if (temp){
+      this.adj.delete(node)
     }
   }
 
@@ -21,6 +20,8 @@ class Node{
   }
 
   isAdjacent(node){
-    return this.adj.indexOf(node) > -1
+    if (this.adj.get(node)){
+      return true
+    } else false
   }
 }

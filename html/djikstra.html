@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<base href="https://jakekrogh.github.io/jakobkp.github.io/">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
 
 <div class="topnav">
-  <a href="index.html">Home</a>
-  <a class="active" href="html/djikstra.html">Djikstra</a>
+  <a href="/index.html">Home</a>
+  <a class="active" href="/html/djikstra.html">Djikstra</a>
 </div>
 
 <h1>Djikstra </h1> 
-<div>
-  <p> Add a vertex by left-clicking on the canvas below.  The position of the Vertex is the position of your mouse.
-      Remove a vertex by right-clicking on the given vertex.
-  </p>
-</div>
+  <div>
+    <p> Add a vertex by left-clicking on the canvas below.  The position of the Vertex is the position of your mouse.
+        Remove a vertex by right-clicking on the given vertex.
+    </p>
+  </div>
 <div>
   <p> Add an edge between two vertices by filling out the three boxes below. 
       Use the number of the vertex in the canvas to identify it. As an example, to add an edge between the vertex "0"
       and the vertex "1" with a weight of 5, write 1 in the first box, 2 in the second, and 5 in the third. 
-      Then press the "Add Edge" button. </p>
+      Then press the "Add Edge" button. The "Remove Edge" button uses the same principle. Only no edge weight needs to be given.  </p>
 </div>
-<div> 
-<input type="text" id="vert1" placeholder="1st Vertex">
-<input type="text" id="vert2" placeholder="2nd Vertex">
-<input type="text" id="edgeWeight" placeholder="Edge Weight">
-<button type="button" onclick="edgeAdder();">Add Edge</button>
+<div style = "display: align-items; ">
+  <div> 
+    <input type="text" id="vert1" placeholder="1st Vertex">
+    <input type="text" id="vert2" placeholder="2nd Vertex">
+    <input type="text" id="edgeWeight" placeholder="Edge Weight">
+    <button type="button" onclick="edgeAdder();">Add Edge</button>
+  </div>
+  <div> 
+    <input type="text" id="rvert1" placeholder="1st Vertex">
+    <input type="text" id="rvert2" placeholder="2nd Vertex">
+    <button type="button" onclick="edgeRemover();" >Remove Edge</button>
+  </div>
 </div>
-<canvas id="canv" width="800" height="400"> </canvas>
+<div>
+  <p> The button "Reset Graph" clears the canvas. </p>
+</div>
+<div>
+  <button type="button" onclick="graphReset();">Reset Graph</button>
+</div>
+<div style = "position: relative;">
+  <canvas id="layer0" width="800" height="400" style = "z-index: 1; position:absolute; left:0px; top:0px;"> </canvas>
+  <!-- <canvas id="layer1" width="800" height="400" style = "z-index: 2; position:absolute; left:0px; top:0px; background: transparent;"> </canvas>
+  <canvas id="layer2" width="800" height="400" style = "z-index: 2; position:absolute; left:0px; top:0px; background: transparent;"> </canvas> -->
 
-<script type = "text/javascript" src="js/circle.js"></script>
-<script type = "text/javascript" src="js/node.js"></script>
-<script type = "text/javascript" src="js/graph.js"></script>
-<script type = "text/javascript" src="js/djikstra.js"></script>
+</div>
+<script type = "text/javascript" src="/js/edge.js"></script>
+<script type = "text/javascript" src="/js/circle.js"></script>
+<script type = "text/javascript" src="/js/node.js"></script>
+<script type = "text/javascript" src="/js/graph.js"></script>
+<script type = "text/javascript" src="/js/djikstra.js"></script>
 </body>
 </html>

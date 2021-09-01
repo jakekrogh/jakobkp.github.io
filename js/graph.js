@@ -31,12 +31,12 @@ class Graph{
     }
     return [source, destination]
   }
-  addEdge(source,destination,weight){
-      source.addAdjacent(destination,weight)
+  addEdge(source,destination,edge){
+      source.addAdjacent(destination,edge)
       if (this.edgeDirection == Graph.UNDIRECTED){
-        destination.addAdjacent(source,weight)
+        destination.addAdjacent(source,edge)
       }
-      return [source, destination, weight]
+      return [source, destination, edge]
   }
 }
 Graph.UNDIRECTED = Symbol('directed graph'); // one-ways edges

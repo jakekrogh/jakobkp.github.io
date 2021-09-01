@@ -33,11 +33,11 @@ body {
 
 canvas {
   background: #f8f8f8;
-  padding: 0;
-  margin-left: 20px;
-  margin-bottom: 1rem;
-  display: block;
-  border: 1px black solid
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+    display: block;
+    border: 1px black solid
 }
 
 p {
@@ -49,5 +49,8 @@ h1 {
   margin-left: 20px;
 }
 input {
+  margin-left: 20px;
+}
+button {
   margin-left: 20px;
 }

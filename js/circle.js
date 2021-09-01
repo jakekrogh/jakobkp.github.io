@@ -1,11 +1,13 @@
 class Circle{
-  constructor(x,y,rad,col){
+  constructor(x,y,rad,col,value){
     this.x = x
     this.y = y
     this.rad = rad
     this.col = col
+    this.value = value
+    this.vis = true
   }
-  draw(value){
+  draw(ctx){
     ctx.beginPath()
     ctx.arc(this.x,this.y, this.rad, 0, 2 * Math.PI)
     ctx.fillStyle = this.col;
@@ -16,6 +18,6 @@ class Circle{
     ctx.font = 'bold 12pt  Serif';
     ctx.fillStyle = 'white';
     ctx.textAlign = 'center';
-    ctx.fillText(value.toString(),this.x,this.y+4);
+    ctx.fillText(this.value.toString(),this.x,this.y+4);
   }
 }
